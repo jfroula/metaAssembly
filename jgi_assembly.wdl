@@ -1,6 +1,6 @@
 workflow jgi_metaASM {
     Array[File] input_file
-    String outdir
+    String? outdir
     String? threads
     String? memory
     String rename_contig_prefix="scaffold"
@@ -248,7 +248,7 @@ task read_mapping_pairs{
 }
 
 task make_output{
-        String outdir
+        String? outdir
         File contigs
         File scaffolds
         File agp
